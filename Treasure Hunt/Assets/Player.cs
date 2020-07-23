@@ -5,33 +5,41 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController controller;
-    public float speed = 5f, jumpHeight = 3f;
+    public float speed = 5f, jumpHeight = 3f, gravityMod = 1f;
     private Vector3 velocity;
-    private bool grounded = true;
+    public GameObject camParent;
     void Start()
     {
-            controller = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+        //XZ movement
+        Vector3 move = (transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal")).normalized;
         controller.Move(move * Time.deltaTime * speed);
-        velocity.y += Physics.gravity.y * Time.deltaTime;
-        
-          
+
+        //Gravity
+        velocity.y += Physics.gravity.y * gravityMod * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-        if (GetComponent<CharacterController>().isGrounded) grounded = true;
-        if (Input.GetButton("Jump") && grounded)
+
+        //Camera Rotation
+        Vector3 rotateY = new Vector3(0, Input.GetAxis("Mouse X"), 0);
+        transform.Rotate(rotateY);
+        Vector3 rotateX = new Vector3(-Input.GetAxis("Mouse Y"), 0, 0);
+        camParent.transform.Rotate(rotateX);
+        
+        if (Input.GetButton("Jump") && GetComponent<CharacterController>().isGrounded)
         {
             velocity.y += Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
-            grounded = false;
         }
-        if(grounded && velocity.y < 0)
+        if(GetComponent<CharacterController>().isGrounded && velocity.y < 0)
         {
             velocity.y = 0f;
         }
-        //if (move != Vector3.zero) transform.forward = move;
     }
 
 }
