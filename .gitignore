@@ -61,3 +61,4 @@ crashlytics-build.properties
 Treasure Hunt/Library/
 *.backup
 *.bakert
+Treasure Hunt/Temp/UnityLockfile
