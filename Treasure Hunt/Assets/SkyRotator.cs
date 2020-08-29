@@ -13,6 +13,7 @@ public class SkyRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.left * Time.deltaTime);
+        Vector3 v = new Vector3(0, 1, 0);
+        transform.Rotate(v * Time.deltaTime);
     }
 }
