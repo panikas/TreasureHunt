@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Value: 1
   meteringMode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   luminanceSource:
     m_OverrideState: 0
     m_Value: 1
@@ -28,13 +28,13 @@ MonoBehaviour:
     m_Value: 0
   compensation:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   limitMin:
     m_OverrideState: 1
-    m_Value: -10
+    m_Value: 0
   limitMax:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 7.77
   curveMap:
     m_OverrideState: 0
     m_Value:
@@ -62,14 +62,14 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   adaptationMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   adaptationSpeedDarkToLight:
-    m_OverrideState: 0
-    m_Value: 3
+    m_OverrideState: 1
+    m_Value: 5
     min: 0.001
   adaptationSpeedLightToDark:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
     min: 0.001
 --- !u!114 &-4865545184367199979
@@ -113,7 +113,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   colorMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   color:
     m_OverrideState: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
     m_Value: 0
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 881.2
+    m_Value: 120.65
   albedo:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -158,14 +158,14 @@ MonoBehaviour:
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 37.4
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   anisotropy:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.648
     min: -1
     max: 1
   globalLightProbeDimmer:
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa3b8214f75b354e9ba2caadd022259, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
@@ -285,19 +285,19 @@ MonoBehaviour:
     min: 0.1
   nearFocusStart:
     m_OverrideState: 1
-    m_Value: 57.8
+    m_Value: 0
     min: 0
   nearFocusEnd:
     m_OverrideState: 1
-    m_Value: 79.9
+    m_Value: 0
     min: 0
   farFocusStart:
     m_OverrideState: 1
-    m_Value: 1109.6
+    m_Value: 37.3
     min: 0
   farFocusEnd:
     m_OverrideState: 1
-    m_Value: 280.36
+    m_Value: 102.4
     min: 0
   m_NearSampleCount:
     m_OverrideState: 0
@@ -341,31 +341,31 @@ MonoBehaviour:
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   rayTracing:
     m_OverrideState: 0
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 1.16
     min: 0
     max: 4
   directLightingStrength:
     m_OverrideState: 1
-    m_Value: 0.96
+    m_Value: 0.77
     min: 0
     max: 1
   radius:
     m_OverrideState: 1
-    m_Value: 2.24
+    m_Value: 0.51
     min: 0.25
     max: 5
   temporalAccumulation:
     m_OverrideState: 0
     m_Value: 1
   ghostingReduction:
-    m_OverrideState: 0
-    m_Value: 0.5
+    m_OverrideState: 1
+    m_Value: 0.978
     min: 0
     max: 1
   blurSharpness:
@@ -405,8 +405,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   m_MaximumRadiusInPixels:
-    m_OverrideState: 0
-    m_Value: 40
+    m_OverrideState: 1
+    m_Value: 71
     min: 16
     max: 256
   m_BilateralUpsample:
@@ -534,7 +534,7 @@ MonoBehaviour:
     max: 10
   groundTint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    m_Value: {r: 0.43787825, g: 0.72686726, b: 0.754717, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 0
@@ -605,38 +605,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384c4d03a551c44448145f4093304119, type: 3}
   m_Name: ScreenSpaceReflection
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   quality:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 2
   enabled:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   rayTracing:
     m_OverrideState: 0
     m_Value: 0
   minSmoothness:
     m_OverrideState: 1
-    m_Value: 0.642
+    m_Value: 0.563
     min: 0
     max: 1
   smoothnessFadeStart:
     m_OverrideState: 1
-    m_Value: 0.708
+    m_Value: 0.824
     min: 0
     max: 1
   reflectSky:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   depthBufferThickness:
-    m_OverrideState: 0
-    m_Value: 0.01
+    m_OverrideState: 1
+    m_Value: 0.014
     min: 0
     max: 1
   screenFadeDistance:
-    m_OverrideState: 0
-    m_Value: 0.1
+    m_OverrideState: 1
+    m_Value: 0.871
     min: 0
     max: 1
   layerMask:
